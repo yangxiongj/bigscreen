@@ -2,9 +2,9 @@ import { FC, useRef, useState, useEffect } from 'react'
 import {
   ActionType,
   ProColumns,
-  ProTable,
   TableDropdown
 } from '@ant-design/pro-table'
+import ProTable from "@ant-design/pro-table";
 import tableConfig from '@src/config/table-config'
 import { ALL_STATE } from '@store/actionType'
 import { connect } from 'react-redux'

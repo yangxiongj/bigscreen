@@ -1005,4 +1005,4 @@
     )
   })()
 })
-//# sourceMappingURL=echarts-wordcloud.min.js.map
+console.log(' sourceMappingURL=echarts-wordcloud.min.js.map');

@@ -307,10 +307,10 @@ const DesignBodyRight: FC<IDesignBodyRightProps> = ({
                                   `rgba(${e.rgb.r},${e.rgb.g},${e.rgb.b},${e.rgb.a})`,
                                   field
                                 )
-                              : form.setFieldValue(
-                                  item.name,
-                                  `rgba(${e.rgb.r},${e.rgb.g},${e.rgb.b},${e.rgb.a})`
-                                )
+                              : form.setFieldsValue({
+                                name: item.name,
+                                age: `rgba(${e.rgb.r},${e.rgb.g},${e.rgb.b},${e.rgb.a})`
+                              })
                           }}
                         />
                       </div>
@@ -333,7 +333,10 @@ const DesignBodyRight: FC<IDesignBodyRightProps> = ({
                 onChange={(e) =>
                   isUpdate
                     ? onChangeHandler(callback, item.name, e, field)
-                    : form.setFieldValue(item.name, e)
+                    : form.setFieldsValue({
+                      name: item.name,
+                      age: e
+                    })
                 }
               />
             </Form.Item>
